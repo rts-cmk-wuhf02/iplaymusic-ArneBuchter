@@ -1,0 +1,15 @@
+.header{
+    font-family: $font;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.3rem;
+    width: 90vw;
+    color: $header-color;
+    background-color: transparent;
+}
+
+.header_dark{
+    color: $header-color-dark;
+}
+
