@@ -1,0 +1,67 @@
+.albumdetails__header .header{
+    color: $header-color-dark;
+}
+
+.albumdetails{
+
+    &__hero{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: auto;
+    }
+
+    &__img{
+        grid-column: 1 / 3;
+        grid-row: 1 / 5;
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    &__songtitle{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        z-index: 10;
+        color: $header-color-dark;
+        font-size: 2rem;
+        padding: 4rem 0 0 1.3rem;
+        line-height: 3rem;
+    }
+
+    &__count{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        font-weight: bold;
+        z-index: 10;
+        color: $header-color-dark;
+        font-size: 0.8rem;
+        padding-left: 1.3rem;
+    }
+
+    &__genre{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        z-index: 10;
+        color: $header-color-dark;
+        font-size: 0.8rem;
+        padding: 5rem 0 0 1.3rem;
+    }
+
+    &__hash-wrapper{
+        padding-left: 1.3rem;
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        display: flex;
+        z-index: 10;
+    }
+
+    &__hash{
+        height: 3rem;
+        padding: 12px;
+        font-weight: bold;
+        margin: 3px;
+        color: $header-color-dark;
+        background-color: $focus-text-color;
+        border-radius: 10px;
+    }
+}

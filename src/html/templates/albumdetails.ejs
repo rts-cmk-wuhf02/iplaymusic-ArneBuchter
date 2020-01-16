@@ -1,0 +1,31 @@
+<% include ../partials/head %>
+
+<div class="albumdetails__header">
+    <% include ../partials/header %>
+</div>
+
+<main class="albumdetails">
+    <section class="albumdetails__hero">
+        <img class="albumdetails__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
+        <h1 class="albumdetails__songtitle">Songtitle</h1>
+        <p class="albumdetails__count">12 <span class="albumdetails__text">songs</span></p>
+        <p class="albumdetails__genre">genres hashtags</p>
+        <div class="albumdetails__hash-wrapper">
+            <div class="albumdetails__hash">#one</div>
+            <div class="albumdetails__hash">#two</div>
+        </div>
+    </section>
+
+
+    <% include ../partials/listobject %>
+    <% include ../partials/listobject %>
+    <% include ../partials/listobject %>
+    <% include ../partials/listobject %>
+</main>
+
+<% include ../partials/footer %>
+<% include ../partials/afterFooter %>
+
+<template class="albumsdetails-template">
+    <% include ../partials/listobject %>
+</template>

@@ -10,26 +10,28 @@
 </head>
 <body>
 
-<header class="header">
+
+<div class="albumdetails__header">
+    <header class="header">
     <i class="fas fa-chevron-left"></i>
     <p class="header__text">Sitetext</p>
     <i class="fas fa-search"></i>
 </header>
+</div>
 
-<main class="base__main">
-    <h1 class="base__heading">All Albums</h1>
+<main class="albumdetails">
+    <section class="albumdetails__hero">
+        <img class="albumdetails__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
+        <h1 class="albumdetails__songtitle">Songtitle</h1>
+        <p class="albumdetails__count">12 <span class="albumdetails__text">songs</span></p>
+        <p class="albumdetails__genre">genres hashtags</p>
+        <div class="albumdetails__hash-wrapper">
+            <div class="albumdetails__hash">#one</div>
+            <div class="albumdetails__hash">#two</div>
+        </div>
+    </section>
 
-    <div class="albums__topbar">
-        <p class="albums__text">New releases</p>
-        <p class="albums__redtext">view all</p>
-    </div>
-    <!-- her skal der komme et slide galleri -->
-    <br><br>
-    
-    <div class="albums__topbar">
-        <p class="albums__text">New releases</p>
-        <p class="albums__redtext">view all</p>
-    </div>
+
     <article class="listobject">
     <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
     <section class="listobject__info">
@@ -74,7 +76,7 @@
     </body>
 </html>
 
-<template class="albums-template">
+<template class="albumsdetails-template">
     <article class="listobject">
     <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
     <section class="listobject__info">

@@ -1,0 +1,60 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<main class="base__main categories">
+    <h1 class="base__heading">Categories</h1>
+
+    <ul class="categories__Wrapper">
+        <li class="categories__mainlist">
+            <p>categori</p>
+            <i class="fas fa-ellipsis-h"></i>            
+        </li>
+        <ul class="categories__subwrapper">
+            <li class="categories__sublist">subitem</li>
+            <i class="fas fa-angle-right categories__angleright"></i>
+        </ul>
+        <ul class="categories__subwrapper">
+            <li class="categories__sublist">subitem</li>
+            <i class="fas fa-angle-right categories__angleright"></i>
+        </ul>
+        <ul class="categories__subwrapper">
+            <li class="categories__sublist">subitem</li>
+            <i class="fas fa-angle-right categories__angleright"></i>
+        </ul>
+        <ul class="categories__subwrapper">
+            <li class="categories__sublist">subitem</li>
+            <i class="fas fa-angle-right categories__angleright"></i>
+        </ul>
+        <li class="categories__mainlist">
+            <p>categori</p>
+            <i class="fas fa-ellipsis-h"></i>
+        </li>
+        <li class="categories__mainlist">
+            <p>categori</p>
+            <i class="fas fa-ellipsis-h"></i>
+        </li>
+        <li class="categories__mainlist">
+            <p>categori</p>
+            <i class="fas fa-ellipsis-h"></i>
+        </li>
+
+    </ul>
+
+</main>
+
+<div class="categories__footer">
+    <% include ../partials/footer %>
+</div>
+<% include ../partials/afterFooter %>
+
+<template class="categories__template">
+    <li class="categories__mainlist">
+        categori
+    </li>
+</template>
+
+<template class="subcategories__template">
+    <ul class="categories__subwrapper">
+        <li class="categories__sublist">subitem</li>
+    </ul>
+</template>

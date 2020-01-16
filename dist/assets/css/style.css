@@ -20,7 +20,6 @@
   font-family: "Poppins", sans-serif;
   top: 0;
   position: fixed;
-  border: solid 1px red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,6 +54,9 @@
   left: 2.6rem;
   font-size: 0.9rem; }
 
+.index__footer .if {
+  color: #341931; }
+
 .albums__topbar {
   display: flex;
   justify-content: space-between;
@@ -63,6 +65,92 @@
 .albums__redtext {
   color: #ff1168;
   padding-right: 5%; }
+
+.albumdetails__header .header {
+  color: #ffffff; }
+
+.albumdetails__hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: auto; }
+
+.albumdetails__img {
+  grid-column: 1 / 3;
+  grid-row: 1 / 5;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover; }
+
+.albumdetails__songtitle {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  z-index: 10;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 4rem 0 0 1.3rem;
+  line-height: 3rem; }
+
+.albumdetails__count {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  font-weight: bold;
+  z-index: 10;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding-left: 1.3rem; }
+
+.albumdetails__genre {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  z-index: 10;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 5rem 0 0 1.3rem; }
+
+.albumdetails__hash-wrapper {
+  padding-left: 1.3rem;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+  display: flex;
+  z-index: 10; }
+
+.albumdetails__hash {
+  height: 3rem;
+  padding: 12px;
+  font-weight: bold;
+  margin: 3px;
+  color: #ffffff;
+  background-color: #ff1168;
+  border-radius: 10px; }
+
+.categories__mainlist {
+  padding: 0 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff1168;
+  width: 95%;
+  height: 3rem;
+  color: #ffffff;
+  margin-top: 5px;
+  border-radius: 10px; }
+
+.categories__subwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.categories__angleright {
+  padding-right: 1.3rem;
+  font-size: 1.5rem; }
+
+.categories__sublist {
+  list-style: none;
+  padding-left: 1.3rem;
+  line-height: 3rem; }
+
+.categories__footer .fc {
+  color: #341931; }
 
 .listobject {
   width: 95%;
@@ -82,6 +170,7 @@
 
 .footer {
   position: fixed;
+  color: #e54028;
   bottom: 0;
   background-color: #ffffff;
   height: 65px;
