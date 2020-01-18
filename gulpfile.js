@@ -40,7 +40,7 @@ function watchScss() {
 }
 
 function javaScript(done){
-    gulp.src('./src/javaScript/**/*.js')
+    gulp.src('./src/javascript/**/*.js')
     .pipe(babel({ presets: ['@babel/env']}))
     .pipe(gulp.dest('./dist/assets/javaScript'))
     .pipe(connect.reload());
@@ -48,7 +48,7 @@ function javaScript(done){
 }
 
 function watchJavaSript() {
-    gulp.watch('./src/javaScript/**/*.js', { ignoreInitial: false }, javaScript);
+    gulp.watch('./src/javascript/**/*.js', { ignoreInitial: false }, javaScript);
 }
 
 function json(done) {

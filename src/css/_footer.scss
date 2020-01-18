@@ -1,6 +1,5 @@
 .footer{
     position: fixed;
-    color: $footer-color;
     bottom: 0;
     background-color: $header-color-dark;
     height: 65px;
@@ -11,4 +10,9 @@
     align-items: center;
     padding: 0 1.3rem;
     box-sizing: border-box;
+
+    &__link{
+        text-decoration: none;
+        color: $footer-color;
+    }
 }

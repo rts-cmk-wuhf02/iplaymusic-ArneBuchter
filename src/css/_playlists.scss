@@ -1,0 +1,31 @@
+
+.playlists{
+    font-family: $font;
+
+    &__heading{
+        width: 150px;
+        margin: 22rem auto 2rem auto;
+        text-align: center;
+    }
+    &__hero{
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: -2;
+
+    }
+    &__hero_heading{
+        position: fixed;
+        top: 70px;
+        font-size: 3rem;
+        color: $header-color-dark;
+        padding-left: 1.3rem;
+    }
+}
+.playlists__header .header{
+    color: $header-color-dark;
+}
+
+.playlists__footer .pf{
+    color: $header-color;
+}
