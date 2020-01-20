@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <filter id="pexels-photo-1727280" x="0" y="0" width="300" height="300" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#pexels-photo-1727280)">
+    <circle id="pexels-photo-1727280-2" data-name="pexels-photo-1727280" cx="112.5" cy="112.5" r="112.5" transform="translate(37.5 37.5)" fill="#ff1168" opacity="0.25"/>
+  </g>
+</svg>
