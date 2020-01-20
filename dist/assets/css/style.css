@@ -15,6 +15,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+.dark__theme {
+  color: #ffffff;
+  background-color: #341931; }
+
 .header {
   font-family: "Poppins", sans-serif;
   top: 0;
