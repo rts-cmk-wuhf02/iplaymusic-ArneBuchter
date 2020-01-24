@@ -1,16 +1,12 @@
-.swiper-container {
-    position: absolute;
-    top: 115px;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-  }
-  .swiper-pagination-bullet{
-      visibility: hidden;
-  }
+.swiper__img{
+  margin-right: 1rem;
+  width: 200px;
+  height: 200px;
+}
+
+.flickity-button{
+  background: hsla(0,0%,100%,.1);
+}
+.flickity-page-dots{
+  display: none;
+}

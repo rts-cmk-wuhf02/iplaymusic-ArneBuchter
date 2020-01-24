@@ -2,6 +2,7 @@
         width: 95%;
         margin: 1rem 0;
         display: grid;
+        row-gap: 16px;
         grid-template-columns: 70px 2.8fr 1fr;
 
     &__img{
@@ -12,6 +13,10 @@
 
     &__heading{
         font-size: 1rem;
+        max-width: 50vw;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;    
     }
 
     &__text{

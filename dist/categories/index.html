@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://kit.fontawesome.com/3a1189f3fa.js"></script>
     <title>iplaymusic</title>
@@ -20,38 +21,7 @@
     <h1 class="base__heading">Categories</h1>
 
     <ul class="categories__Wrapper">
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>            
-        </li>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>
-        </li>
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>
-        </li>
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>
-        </li>
+
 
     </ul>
 
@@ -59,24 +29,25 @@
 
 <div class="categories__footer">
     <footer class="footer">
-    <a class="footer__link" href="#"><i class="fab fa-creative-commons-sampling"></i></a>
+    <a class="footer__link" href="/albums"><i class="fab fa-creative-commons-sampling"></i></a>
     <a class="footer__link" href="/playlists"><i class="fas fa-microphone-alt pf"></i></a>
     <a class="footer__link" href="/"><i class="fas fa-bullseye if"></i></a>
     <a class="footer__link" href="#"><i class="fas fa-adjust"></i></a>
     <a class="footer__link" href="/categories"><i class="fas fa-folder-open fc"></i></a>
 </footer>
 </div>
+<template class="categories__template">
+    <li class="categories__mainlist a">
+        <a href="#" class="dalink"></a>
+        <div class="icon"><i class="fas fa-ellipsis-h clicked"></i></div>
+    </li>
+            <div class="sublinks" id="sublinks">
+                <a href="#" class="subLink" id="sublinkOne">link a</a>
+                <a href="#" class="subLink" id="sublinkTwo">link b</a>
+                <a href="#" class="subLink" id="sublinkThree">link c</a>
+                <a href="#" class="subLink" id="sublinkFour">link d</a>
+            </div>
+</template>
+<script src="/assets/javaScript/fetch.js"></script>
     </body>
 </html>
-
-<template class="categories__template">
-    <li class="categories__mainlist">
-        categori
-    </li>
-</template>
-
-<template class="subcategories__template">
-    <ul class="categories__subwrapper">
-        <li class="categories__sublist">subitem</li>
-    </ul>
-</template>

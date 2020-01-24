@@ -1,11 +1,18 @@
 .albums{
+    &__bar{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+    }
     &__topbar{
         display: flex;
         justify-content: space-between;
-        padding: 1rem 0;
+        padding: 3rem 0 2rem 0;
     }
     &__redtext{
         color: $focus-text-color;
         padding-right: 5%;
     }
 }
+
+

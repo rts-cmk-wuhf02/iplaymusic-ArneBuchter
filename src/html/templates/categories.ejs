@@ -5,38 +5,7 @@
     <h1 class="base__heading">Categories</h1>
 
     <ul class="categories__Wrapper">
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>            
-        </li>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <ul class="categories__subwrapper">
-            <li class="categories__sublist">subitem</li>
-            <i class="fas fa-angle-right categories__angleright"></i>
-        </ul>
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>
-        </li>
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>
-        </li>
-        <li class="categories__mainlist">
-            <p>categori</p>
-            <i class="fas fa-ellipsis-h"></i>
-        </li>
+
 
     </ul>
 
@@ -45,16 +14,17 @@
 <div class="categories__footer">
     <% include ../partials/footer %>
 </div>
-<% include ../partials/afterFooter %>
-
 <template class="categories__template">
-    <li class="categories__mainlist">
-        categori
+    <li class="categories__mainlist a">
+        <a href="#" class="dalink"></a>
+        <div class="icon"><i class="fas fa-ellipsis-h clicked"></i></div>
     </li>
+            <div class="sublinks" id="sublinks">
+                <a href="#" class="subLink" id="sublinkOne">link a</a>
+                <a href="#" class="subLink" id="sublinkTwo">link b</a>
+                <a href="#" class="subLink" id="sublinkThree">link c</a>
+                <a href="#" class="subLink" id="sublinkFour">link d</a>
+            </div>
 </template>
-
-<template class="subcategories__template">
-    <ul class="categories__subwrapper">
-        <li class="categories__sublist">subitem</li>
-    </ul>
-</template>
+<script src="/assets/javaScript/fetch.js"></script>
+<% include ../partials/afterFooter %>

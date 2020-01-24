@@ -1,29 +1,29 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<main class="base__main">
+<main class="base__main albums">
     <h1 class="base__heading">All Albums</h1>
 
-    <div class="albums__topbar">
+    <div class="albums__bar">
         <p class="albums__text">New releases</p>
         <p class="albums__redtext">view all</p>
     </div>
-    <!-- her skal der komme et slide galleri -->
-    <br><br>
+
+    <% include ../partials/swiper %>
+    
     
     <div class="albums__topbar">
         <p class="albums__text">New releases</p>
         <p class="albums__redtext">view all</p>
     </div>
     <% include ../partials/listobject %>
-    <% include ../partials/listobject %>
-    <% include ../partials/listobject %>
-    <% include ../partials/listobject %>
+
 </main>
 
 <% include ../partials/footer %>
+    <template class="albums-template">
+        <% include ../partials/listobject %>
+    </template>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="/assets/javaScript/albums.js"></script>
 <% include ../partials/afterFooter %>
-
-<template class="albums-template">
-    <% include ../partials/listobject %>
-</template>

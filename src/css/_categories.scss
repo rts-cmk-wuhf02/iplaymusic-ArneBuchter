@@ -1,10 +1,7 @@
 .categories{
 
-    &__wrapper{
-        
-    }
-
     &__mainlist{
+        position: relative;
         padding: 0 1.3rem;
         display: flex;
         align-items: center;
@@ -15,12 +12,6 @@
         color: $header-color-dark;
         margin-top: 5px;
         border-radius: 10px;
-    }
-
-    &__subwrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     &__angleright{
@@ -37,4 +28,29 @@
     &__footer .fc{
         color: $header-color;
     }
+}
+.dalink{
+    text-decoration: none;
+    color: $header-color-dark;
+    justify-self: flex-end;
+}
+
+.subLinks{
+   display: none;
+}
+.subLink{
+    margin: 1rem 1.3rem;
+    display: none; 
+    text-decoration: none;
+    color: $header-color;
+}
+
+.subshow{
+    display: block;
+}
+.icon{
+    position: absolute;
+    right: 1.3rem;
+    display: flex;
+    justify-content: flex-end;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://kit.fontawesome.com/3a1189f3fa.js"></script>
     <title>iplaymusic</title>
@@ -16,71 +17,68 @@
     <i class="fas fa-search"></i>
 </header>
 
-<main class="base__main">
+<main class="base__main albums">
     <h1 class="base__heading">All Albums</h1>
 
-    <div class="albums__topbar">
+    <div class="albums__bar">
         <p class="albums__text">New releases</p>
         <p class="albums__redtext">view all</p>
     </div>
-    <!-- her skal der komme et slide galleri -->
-    <br><br>
+
+    
+
+
+<div class="main-carousel">
+
+
+</div>
+
+  <template class="carusel__template">
+    <div class="carousel-cell"><img class="swiper__img" src="" alt="" srcset=""></div>
+  </template>
+    
     
     <div class="albums__topbar">
         <p class="albums__text">New releases</p>
         <p class="albums__redtext">view all</p>
     </div>
     <article class="listobject">
-    <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-    <section class="listobject__info">
-        <h4 class="listobject__heading">Album Title</h4>
-        <p class="listobject__text">Artist</p>
-    </section>
-    <p class="listobject__count listobject__text">12 <span class="listobject__text">songs</span></p>
+
 </article>
-    <article class="listobject">
-    <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-    <section class="listobject__info">
-        <h4 class="listobject__heading">Album Title</h4>
-        <p class="listobject__text">Artist</p>
-    </section>
-    <p class="listobject__count listobject__text">12 <span class="listobject__text">songs</span></p>
-</article>
-    <article class="listobject">
-    <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-    <section class="listobject__info">
-        <h4 class="listobject__heading">Album Title</h4>
-        <p class="listobject__text">Artist</p>
-    </section>
-    <p class="listobject__count listobject__text">12 <span class="listobject__text">songs</span></p>
-</article>
-    <article class="listobject">
-    <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-    <section class="listobject__info">
-        <h4 class="listobject__heading">Album Title</h4>
-        <p class="listobject__text">Artist</p>
-    </section>
-    <p class="listobject__count listobject__text">12 <span class="listobject__text">songs</span></p>
-</article>
+
+<template class="listobject__template">
+        <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
+        <section class="listobject__info">         
+            <h4 class="listobject__heading">Album Title</h4>
+            <p class="listobject__text" id="artist">Artist</p>
+        </section>
+        <p class="listobject__count listobject__text"></p>
+</template>
+
 </main>
 
 <footer class="footer">
-    <a class="footer__link" href="#"><i class="fab fa-creative-commons-sampling"></i></a>
+    <a class="footer__link" href="/albums"><i class="fab fa-creative-commons-sampling"></i></a>
     <a class="footer__link" href="/playlists"><i class="fas fa-microphone-alt pf"></i></a>
     <a class="footer__link" href="/"><i class="fas fa-bullseye if"></i></a>
     <a class="footer__link" href="#"><i class="fas fa-adjust"></i></a>
     <a class="footer__link" href="/categories"><i class="fas fa-folder-open fc"></i></a>
 </footer>
+    <template class="albums-template">
+        <article class="listobject">
+
+</article>
+
+<template class="listobject__template">
+        <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
+        <section class="listobject__info">         
+            <h4 class="listobject__heading">Album Title</h4>
+            <p class="listobject__text" id="artist">Artist</p>
+        </section>
+        <p class="listobject__count listobject__text"></p>
+</template>
+    </template>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="/assets/javaScript/albums.js"></script>
     </body>
 </html>
-
-<template class="albums-template">
-    <article class="listobject">
-    <img class="listobject__img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-    <section class="listobject__info">
-        <h4 class="listobject__heading">Album Title</h4>
-        <p class="listobject__text">Artist</p>
-    </section>
-    <p class="listobject__count listobject__text">12 <span class="listobject__text">songs</span></p>
-</article>
-</template>
