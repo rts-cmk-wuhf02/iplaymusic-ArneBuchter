@@ -1,32 +1,8 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
-  var colors = ["#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625"];
+  var colors = ["#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625", "#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625"];
   var catLink = document.querySelector('.categories__Wrapper');
-  catLink.addEventListener("click", function (e) {
-    var mainlist = document.querySelector('.categories__mainlist');
-    var sublinks = document.querySelector('#sublinks');
-    var sublinkOne = document.querySelector('#sublinkOne');
-    var sublinkTwo = document.querySelector('#sublinkTwo');
-    var sublinkThree = document.querySelector('#sublinkThree');
-    var sublinkFour = document.querySelector('#sublinkFour');
-
-    if (e.target.classList.contains('a')) {
-      mainlist.classList.replace("a", "b");
-      sublinks.classList.replace("sublinks", "subshow");
-      sublinkOne.classList.add('subshow');
-      sublinkTwo.classList.add('subshow');
-      sublinkThree.classList.add('subshow');
-      sublinkFour.classList.add('subshow');
-    } else if (e.target.classList.contains('b')) {
-      mainlist.classList.replace("b", "a");
-      sublinks.classList.replace("subshow", "sublinks");
-      sublinkOne.classList.remove('subshow');
-      sublinkTwo.classList.remove('subshow');
-      sublinkThree.classList.remove('subshow');
-      sublinkFour.classList.remove('subshow');
-    }
-  });
 
   if (sessionStorage.getItem("access_token") != undefined) {
     getfetch();
@@ -93,12 +69,21 @@ document.addEventListener('DOMContentLoaded', function () {
       /*       console.log(sessionStorage.access_token);
             console.log(data.categories.items); */
 
+      var subTemplate = document.querySelector('.sublinks__template'); //let listItem = document.getElementsByClassName('sublinks')[0];
+
+      var textInput = ['link 1', 'link 2', 'link 3', 'link 4'];
       data.categories.items.forEach(function (categori, id) {
         var clone = categoriTemplate.content.cloneNode(true);
         clone.querySelector('.categories__mainlist').style.backgroundColor = colors[id];
         clone.querySelector('.dalink').innerText = "".concat(categori.name);
         clone.querySelector('.icon');
         clone.querySelector('.sublinks');
+        textInput.forEach(function (link) {
+          //  console.log(link)
+          var subClone = subTemplate.content.cloneNode(true);
+          subClone.querySelector('.sublink__a').innerText = link;
+          clone.querySelector('.sublinks').appendChild(subClone);
+        });
         list.appendChild(clone);
       });
     })["catch"](function (error) {

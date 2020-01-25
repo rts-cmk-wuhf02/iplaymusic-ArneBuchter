@@ -4,7 +4,7 @@
 
     &__heading{
         width: 150px;
-        margin: 22rem auto 2rem auto;
+        margin: 1rem auto 2rem auto;
         text-align: center;
     }
     &__hero{
@@ -20,6 +20,10 @@
         font-size: 3rem;
         color: $header-color-dark;
         padding-left: 1.3rem;
+    }
+
+    &__contentwrapper{
+        margin: 10rem 0 0 0
     }
 }
 .playlists__header .header{

@@ -1,7 +1,6 @@
 .categories{
 
     &__mainlist{
-        position: relative;
         padding: 0 1.3rem;
         display: flex;
         align-items: center;
@@ -35,22 +34,17 @@
     justify-self: flex-end;
 }
 
-.subLinks{
-   display: none;
+.sublinks{
+    display: block;
+    list-style: none;
 }
-.subLink{
+.sublink__a{
     margin: 1rem 1.3rem;
-    display: none; 
+    display: block; 
     text-decoration: none;
     color: $header-color;
 }
 
 .subshow{
     display: block;
-}
-.icon{
-    position: absolute;
-    right: 1.3rem;
-    display: flex;
-    justify-content: flex-end;
 }

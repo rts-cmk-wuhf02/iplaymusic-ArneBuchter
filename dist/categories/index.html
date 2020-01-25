@@ -37,16 +37,20 @@
 </footer>
 </div>
 <template class="categories__template">
-    <li class="categories__mainlist a">
+    <li class="categories__mainlist">
         <a href="#" class="dalink"></a>
-        <div class="icon"><i class="fas fa-ellipsis-h clicked"></i></div>
+        <i class="fas fa-ellipsis-h clicked"></i>
     </li>
-            <div class="sublinks" id="sublinks">
-                <a href="#" class="subLink" id="sublinkOne">link a</a>
-                <a href="#" class="subLink" id="sublinkTwo">link b</a>
-                <a href="#" class="subLink" id="sublinkThree">link c</a>
-                <a href="#" class="subLink" id="sublinkFour">link d</a>
-            </div>
+            <ul class="sublinks" id="sublinks">
+        
+            </ul>
+</template>
+
+<template class="sublinks__template">
+        <li class="subLink">
+            <a href="#" class="sublink__a"></a>
+        </li>
+    
 </template>
 <script src="/assets/javaScript/fetch.js"></script>
     </body>

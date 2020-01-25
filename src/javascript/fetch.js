@@ -1,32 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let colors = ["#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625"];
-  let catLink = document.querySelector('.categories__Wrapper');
-  
-  catLink.addEventListener("click", function (e) {
-    let mainlist = document.querySelector('.categories__mainlist')
-    let sublinks = document.querySelector('#sublinks');
-    let sublinkOne = document.querySelector('#sublinkOne')
-    let sublinkTwo = document.querySelector('#sublinkTwo')
-    let sublinkThree = document.querySelector('#sublinkThree')
-    let sublinkFour = document.querySelector('#sublinkFour')
-
-  if (e.target.classList.contains('a')){
-       mainlist.classList.replace("a", "b");
-       sublinks.classList.replace("sublinks", "subshow");        
-       sublinkOne.classList.add('subshow')
-       sublinkTwo.classList.add('subshow')
-       sublinkThree.classList.add('subshow')
-       sublinkFour.classList.add('subshow')
-       
-     }else if(e.target.classList.contains('b')){
-      mainlist.classList.replace("b" , "a");
-      sublinks.classList.replace("subshow", "sublinks");
-      sublinkOne.classList.remove('subshow')
-      sublinkTwo.classList.remove('subshow')
-      sublinkThree.classList.remove('subshow')
-      sublinkFour.classList.remove('subshow')
-    } 
-  });
+  let colors = ["#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625","#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625"];  let catLink = document.querySelector('.categories__Wrapper');
 
   if (sessionStorage.getItem("access_token") != undefined) {
     getfetch();
@@ -91,15 +64,30 @@ document.addEventListener('DOMContentLoaded', function () {
       let list = document.getElementsByClassName('categories__Wrapper')[0];
 /*       console.log(sessionStorage.access_token);
       console.log(data.categories.items); */
+
+      
+      let subTemplate = document.querySelector('.sublinks__template');
+      //let listItem = document.getElementsByClassName('sublinks')[0];
+
+      let textInput = ['link 1', 'link 2', 'link 3', 'link 4'];
+
       data.categories.items.forEach(function (categori, id) {
         let clone = categoriTemplate.content.cloneNode(true);
         clone.querySelector('.categories__mainlist').style.backgroundColor = colors[id];
-        clone.querySelector('.dalink').innerText = "".concat(categori.name);
+        clone.querySelector('.dalink').innerText = `${categori.name}`;
         clone.querySelector('.icon');
         clone.querySelector('.sublinks');
+        
+        textInput.forEach(function(link) {
+          //  console.log(link)
+          let subClone = subTemplate.content.cloneNode(true);
+          subClone.querySelector('.sublink__a').innerText = link;
+          clone.querySelector('.sublinks').appendChild(subClone);
+        })
         list.appendChild(clone);
       });
-    })["catch"](function (error) {
+    })
+    ["catch"](function (error) {
       console.error('error', error);
 
       if (error) {
