@@ -9,18 +9,21 @@
         <img src="/assets/images/sound-wave.svg" alt="" srcset="">
         <h1 class="playlists__hero_heading">Playlists</h1>
         
+        <div class="playlists__contentwrapper">
+            <% include ../partials/swiper %>
+        </div>
     </div>
-    <div class="playlists__contentwrapper">
-        <% include ../partials/swiper %>
+    <div class="playlists__listobject">
         <h2 class="playlists__heading">Playlist name</h2>
+        <% include ../partials/listobject %>
     </div>
-    <% include ../partials/listobject %>
 
 </main>
 
 <div class="playlists__footer">
     <% include ../partials/footer %>
 </div>
+<script src="/assets/javaScript/theme.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="/assets/javaScript/playlists.js"></script>
 

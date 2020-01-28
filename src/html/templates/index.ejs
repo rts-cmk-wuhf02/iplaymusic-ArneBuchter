@@ -1,27 +1,23 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 <main class="base__main">
-    <h1 class="base__heading">Featured</h1>
+    <div class="hero light__theme index__hero">
+        <h1 class="base__heading">Featured</h1>
+    </div>
     <section class="index__display">
-        <figure class="index__display-wrapper">
-            <img class="index__display-img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-            <p class="index__display-text">The greatest showman</p>
-            <p class="index__display-smtext">soundtrack</p>
-        </figure>
-        <figure class="index__display-wrapper">
-            <img class="index__display-img" src="/assets/images/placeholder.jpg" alt="" srcset="">
-            <p class="index__display-text"></p>
-        </figure>
+        <!-- content from template-->
     </section>
 </main>
-<div class="index__footer">
+<div class="index__footer theme__footer">
     <% include ../partials/footer %>
 </div>
-<% include ../partials/afterFooter %>
-
-<template>
+<template class="index__template">
     <figure class="index__display-wrapper">
         <img class="index__display-img" src="" alt="" srcset="">
         <p class="index__display-text"></p>
+        <p class="index__display-smtext">soundtrack</p>
     </figure>
 </template>
+<script src="/assets/javaScript/theme.js"></script>
+<script src="/assets/javaScript/index.js"></script>
+<% include ../partials/afterFooter %>

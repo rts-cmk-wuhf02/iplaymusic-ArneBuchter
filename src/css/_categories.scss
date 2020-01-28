@@ -27,6 +27,10 @@
     &__footer .fc{
         color: $header-color;
     }
+
+    &__footer .fcd{
+        color: $header-color-dark;
+    }
 }
 .dalink{
     text-decoration: none;
@@ -35,7 +39,7 @@
 }
 
 .sublinks{
-    display: block;
+    display: none;
     list-style: none;
 }
 .sublink__a{

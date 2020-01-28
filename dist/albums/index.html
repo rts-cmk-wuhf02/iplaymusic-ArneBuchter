@@ -9,23 +9,26 @@
     <script src="https://kit.fontawesome.com/3a1189f3fa.js"></script>
     <title>iplaymusic</title>
 </head>
-<body>
+<body class="change-theme light__theme">
 
-<header class="header">
+
+<div class="albums__header">
+    <header class="header">
     <i class="fas fa-chevron-left"></i>
     <p class="header__text">Sitetext</p>
     <i class="fas fa-search"></i>
 </header>
-
+</div>
 <main class="base__main albums">
-    <h1 class="base__heading">All Albums</h1>
+    <div class="hero albums__hero">
+        <h1 class="base__heading">All Albums</h1>
 
-    <div class="albums__bar">
-        <p class="albums__text">New releases</p>
-        <p class="albums__redtext">view all</p>
-    </div>
+        <div class="albums__bar">
+            <p class="albums__text">New releases</p>
+            <p class="albums__redtext">view all</p>
+        </div>
 
-    
+        
 
 
 <div class="main-carousel">
@@ -36,13 +39,15 @@
   <template class="carusel__template">
     <div class="carousel-cell"><img class="swiper__img" src="" alt="" srcset=""></div>
   </template>
-    
-    
-    <div class="albums__topbar">
-        <p class="albums__text">New releases</p>
-        <p class="albums__redtext">view all</p>
+        
+        
+        <div class="albums__topbar">
+            <p class="albums__text">New releases</p>
+            <p class="albums__redtext">view all</p>
+        </div>
     </div>
-    <article class="listobject">
+    <div class="albums__list">
+        <article class="listobject">
 
 </article>
 
@@ -54,16 +59,20 @@
         </section>
         <p class="listobject__count listobject__text"></p>
 </template>
-
+    </div>
 </main>
 
-<footer class="footer">
-    <a class="footer__link" href="/albums"><i class="fab fa-creative-commons-sampling"></i></a>
+<div class="albums__footer">
+    <footer class="footer">
+    <a class="footer__link" href="/albums"><i class="fab fa-creative-commons-sampling alf"></i></a>
     <a class="footer__link" href="/playlists"><i class="fas fa-microphone-alt pf"></i></a>
     <a class="footer__link" href="/"><i class="fas fa-bullseye if"></i></a>
-    <a class="footer__link" href="#"><i class="fas fa-adjust"></i></a>
+    <a class="footer__link theme light__theme" href="#"><i class="fas fa-adjust"></i></a>
     <a class="footer__link" href="/categories"><i class="fas fa-folder-open fc"></i></a>
 </footer>
+
+
+</div>
     <template class="albums-template">
         <article class="listobject">
 
@@ -78,7 +87,8 @@
         <p class="listobject__count listobject__text"></p>
 </template>
     </template>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="/assets/javaScript/theme.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="/assets/javaScript/albums.js"></script>
     </body>
 </html>

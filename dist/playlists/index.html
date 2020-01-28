@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/3a1189f3fa.js"></script>
     <title>iplaymusic</title>
 </head>
-<body>
+<body class="change-theme light__theme">
 
 
 <div class="playlists__header">    
@@ -25,9 +25,8 @@
         <img src="/assets/images/sound-wave.svg" alt="" srcset="">
         <h1 class="playlists__hero_heading">Playlists</h1>
         
-    </div>
-    <div class="playlists__contentwrapper">
-        
+        <div class="playlists__contentwrapper">
+            
 
 
 <div class="main-carousel">
@@ -38,9 +37,11 @@
   <template class="carusel__template">
     <div class="carousel-cell"><img class="swiper__img" src="" alt="" srcset=""></div>
   </template>
-        <h2 class="playlists__heading">Playlist name</h2>
+        </div>
     </div>
-    <article class="listobject">
+    <div class="playlists__listobject">
+        <h2 class="playlists__heading">Playlist name</h2>
+        <article class="listobject">
 
 </article>
 
@@ -52,18 +53,22 @@
         </section>
         <p class="listobject__count listobject__text"></p>
 </template>
+    </div>
 
 </main>
 
 <div class="playlists__footer">
     <footer class="footer">
-    <a class="footer__link" href="/albums"><i class="fab fa-creative-commons-sampling"></i></a>
+    <a class="footer__link" href="/albums"><i class="fab fa-creative-commons-sampling alf"></i></a>
     <a class="footer__link" href="/playlists"><i class="fas fa-microphone-alt pf"></i></a>
     <a class="footer__link" href="/"><i class="fas fa-bullseye if"></i></a>
-    <a class="footer__link" href="#"><i class="fas fa-adjust"></i></a>
+    <a class="footer__link theme light__theme" href="#"><i class="fas fa-adjust"></i></a>
     <a class="footer__link" href="/categories"><i class="fas fa-folder-open fc"></i></a>
 </footer>
+
+
 </div>
+<script src="/assets/javaScript/theme.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="/assets/javaScript/playlists.js"></script>
 

@@ -1,4 +1,19 @@
 .albums{
+
+    &__header{
+        background-color: $header-color-dark !important;
+        z-index: 5;
+    }
+
+    &__hero{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        padding-top: 3rem;
+        left: 1.3rem;
+        z-index: 5;
+        background-color: $header-color-dark;
+    }
     &__bar{
         display: flex;
         justify-content: space-between;
@@ -9,9 +24,20 @@
         justify-content: space-between;
         padding: 3rem 0 2rem 0;
     }
+
+    &__list{
+        padding: 19rem 0 5rem 0;
+    }
     &__redtext{
         color: $focus-text-color;
         padding-right: 5%;
+    }
+
+    &__footer .alf{
+        color: $header-color;
+    }
+    &__footer .alfd{
+        color: $header-color-dark;
     }
 }
 

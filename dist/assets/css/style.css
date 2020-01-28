@@ -19,6 +19,9 @@
   color: #ffffff;
   background-color: #341931; }
 
+.dark__hero {
+  background-color: #341931 !important; }
+
 .header {
   font-family: "Poppins", sans-serif;
   top: 0;
@@ -30,7 +33,7 @@
   width: 100vw;
   color: #341931;
   background-color: transparent;
-  z-index: 10; }
+  z-index: 1000; }
 
 .header_dark {
   color: #ffffff; }
@@ -45,6 +48,14 @@
 
 .flickity-page-dots {
   display: none; }
+
+.index__hero {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  padding-top: 3rem;
+  width: 100%;
+  z-index: 20; }
 
 .index__display-wrapper {
   position: relative; }
@@ -71,6 +82,22 @@
 .index__footer .if {
   color: #341931; }
 
+.index__footer .ifd {
+  color: #ffffff; }
+
+.albums__header {
+  background-color: #ffffff !important;
+  z-index: 5; }
+
+.albums__hero {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 3rem;
+  left: 1.3rem;
+  z-index: 5;
+  background-color: #ffffff; }
+
 .albums__bar {
   display: flex;
   justify-content: space-between;
@@ -81,9 +108,18 @@
   justify-content: space-between;
   padding: 3rem 0 2rem 0; }
 
+.albums__list {
+  padding: 19rem 0 5rem 0; }
+
 .albums__redtext {
   color: #ff1168;
   padding-right: 5%; }
+
+.albums__footer .alf {
+  color: #341931; }
+
+.albums__footer .alfd {
+  color: #ffffff; }
 
 .albumdetails__header .header {
   color: #ffffff; }
@@ -166,13 +202,16 @@
 .categories__footer .fc {
   color: #341931; }
 
+.categories__footer .fcd {
+  color: #ffffff; }
+
 .dalink {
   text-decoration: none;
   color: #ffffff;
   justify-self: flex-end; }
 
 .sublinks {
-  display: block;
+  display: none;
   list-style: none; }
 
 .sublink__a {
@@ -186,15 +225,17 @@
 
 .playlists {
   font-family: "Poppins", sans-serif; }
+  .playlists__listobject {
+    padding: 22rem 1rem 7rem 1.3rem; }
   .playlists__heading {
     width: 150px;
-    margin: 1rem auto 2rem auto;
+    margin: 0 auto 2rem auto;
     text-align: center; }
   .playlists__hero {
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: -2; }
+    z-index: 10; }
   .playlists__hero_heading {
     position: fixed;
     top: 70px;
@@ -202,13 +243,16 @@
     color: #ffffff;
     padding-left: 1.3rem; }
   .playlists__contentwrapper {
-    margin: 10rem 0 0 0; }
+    margin: -8rem 0 0 0; }
 
 .playlists__header .header {
   color: #ffffff; }
 
 .playlists__footer .pf {
   color: #341931; }
+
+.playlists__footer .pfd {
+  color: #ffffff; }
 
 .player {
   font-family: "Poppins", sans-serif;

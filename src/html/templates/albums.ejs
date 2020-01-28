@@ -1,29 +1,37 @@
 <% include ../partials/head %>
-<% include ../partials/header %>
 
+<div class="albums__header">
+    <% include ../partials/header %>
+</div>
 <main class="base__main albums">
-    <h1 class="base__heading">All Albums</h1>
+    <div class="hero albums__hero">
+        <h1 class="base__heading">All Albums</h1>
 
-    <div class="albums__bar">
-        <p class="albums__text">New releases</p>
-        <p class="albums__redtext">view all</p>
+        <div class="albums__bar">
+            <p class="albums__text">New releases</p>
+            <p class="albums__redtext">view all</p>
+        </div>
+
+        <% include ../partials/swiper %>
+        
+        
+        <div class="albums__topbar">
+            <p class="albums__text">New releases</p>
+            <p class="albums__redtext">view all</p>
+        </div>
     </div>
-
-    <% include ../partials/swiper %>
-    
-    
-    <div class="albums__topbar">
-        <p class="albums__text">New releases</p>
-        <p class="albums__redtext">view all</p>
+    <div class="albums__list">
+        <% include ../partials/listobject %>
     </div>
-    <% include ../partials/listobject %>
-
 </main>
 
-<% include ../partials/footer %>
+<div class="albums__footer">
+    <% include ../partials/footer %>
+</div>
     <template class="albums-template">
         <% include ../partials/listobject %>
     </template>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="/assets/javaScript/theme.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="/assets/javaScript/albums.js"></script>
 <% include ../partials/afterFooter %>

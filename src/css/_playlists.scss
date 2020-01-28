@@ -2,16 +2,20 @@
 .playlists{
     font-family: $font;
 
+    &__listobject{
+        padding: 22rem 1rem 7rem 1.3rem;
+    }
+
     &__heading{
         width: 150px;
-        margin: 1rem auto 2rem auto;
+        margin: 0 auto 2rem auto;
         text-align: center;
     }
     &__hero{
         top: 0;
         position: fixed;
         width: 100%;
-        z-index: -2;
+        z-index: 10;
 
     }
     &__hero_heading{
@@ -23,7 +27,7 @@
     }
 
     &__contentwrapper{
-        margin: 10rem 0 0 0
+        margin: -8rem 0 0 0
     }
 }
 .playlists__header .header{
@@ -32,4 +36,7 @@
 
 .playlists__footer .pf{
     color: $header-color;
+}
+.playlists__footer .pfd{
+    color: $header-color-dark;
 }

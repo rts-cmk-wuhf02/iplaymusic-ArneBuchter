@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 /*             console.log(sessionStorage.access_token) */
 
                 data.albums.items.forEach(function (album) {
-                    console.log(album.total_tracks)
+                    console.log(album)
 
                     let cloneOne = swiperTemplate.content.cloneNode(true);
                     cloneOne.querySelector('.swiper__img').src = `${album.images[0].url}`;
