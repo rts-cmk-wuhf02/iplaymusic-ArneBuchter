@@ -1,25 +1,10 @@
-jQuery(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
     let audioArray = document.getElementsByClassName('aplayer');
-
     let nowPlaying = audioArray[0];
+    let playbutton = document.querySelector('.playbutton')
     console.log(nowPlaying)
 
-    nowPlaying.load();
-    $('.player__playicon').on('click', function(){
+    playbutton.addEventListener('click', () => {
         nowPlaying.play();
-    });
-/*   
-
-    $('.stop').on('click', function(){
-        nowPlaying.pause();
     })
-
-    $('.step').on('click', function() {
-        $each($('aplayer'), function(){
-            this.pause();
-        });
-        ++i;
-        nowPlaying.load();
-        nowPlaying.play();
-    }) */
 })

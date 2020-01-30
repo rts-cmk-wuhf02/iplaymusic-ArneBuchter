@@ -1,25 +1,11 @@
 "use strict";
 
-jQuery(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
   var audioArray = document.getElementsByClassName('aplayer');
   var nowPlaying = audioArray[0];
+  var playbutton = document.querySelector('.playbutton');
   console.log(nowPlaying);
-  nowPlaying.load();
-  $('.player__playicon').on('click', function () {
+  playbutton.addEventListener('click', function () {
     nowPlaying.play();
   });
-  /*   
-  
-      $('.stop').on('click', function(){
-          nowPlaying.pause();
-      })
-  
-      $('.step').on('click', function() {
-          $each($('aplayer'), function(){
-              this.pause();
-          });
-          ++i;
-          nowPlaying.load();
-          nowPlaying.play();
-      }) */
 });
