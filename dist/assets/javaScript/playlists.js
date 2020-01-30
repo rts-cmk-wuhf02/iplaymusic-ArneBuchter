@@ -1,6 +1,9 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.header__text');
+  header.innerHTML = "Playlists";
+
   if (sessionStorage.getItem("access_token") != undefined) {
     getfetch();
     getPlaylistFetch();

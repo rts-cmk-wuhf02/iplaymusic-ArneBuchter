@@ -12,10 +12,11 @@
 <body class="change-theme light__theme">
 
 <header class="header">
-    <i class="fas fa-chevron-left"></i>
+    <i class="fas fa-chevron-left back"></i>
     <p class="header__text">Sitetext</p>
     <i class="fas fa-search"></i>
 </header>
+<script src="/assets/javaScript/header.js"></script>
 
 <main class="base__main categories">
     <h1 class="base__heading">Categories</h1>
@@ -39,13 +40,15 @@
 
 </div>
 <template class="categories__template">
-    <li class="categories__mainlist">
-        <a href="#" class="dalink"></a>
-        <i class="fas fa-ellipsis-h clicked"></i>
-    </li>
-            <ul class="sublinks" id="sublinks">
-        
-            </ul>
+    <div class="categories__element-wrapper">
+        <li class="categories__mainlist">
+                <a href="#" class="dalink"></a>
+                <i class="fas fa-ellipsis-h clicked"></i>
+        </li>
+        <ul class="sublinks" id="sublinks">
+    
+        </ul>
+    </div>
 </template>
 
 <template class="sublinks__template">

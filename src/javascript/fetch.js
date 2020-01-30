@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     postfetch();
   }
 
+  let header = document.querySelector('.header__text');
+  header.innerHTML = "Categories";
+
   console.log(sessionStorage);
 
   function postfetch() {
@@ -62,13 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }).then(function (data) {
       let categoriTemplate = document.querySelector('.categories__template');
       let list = document.getElementsByClassName('categories__Wrapper')[0];
-/*       console.log(sessionStorage.access_token);
-      console.log(data.categories.items); */
 
-      
       let subTemplate = document.querySelector('.sublinks__template');
-      //let listItem = document.getElementsByClassName('sublinks')[0];
-
       let textInput = ['link 1', 'link 2', 'link 3', 'link 4'];
 
       data.categories.items.forEach(function (categori, id) {
@@ -79,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
         clone.querySelector('.sublinks');
         
         textInput.forEach(function(link) {
-          //  console.log(link)
           let subClone = subTemplate.content.cloneNode(true);
           subClone.querySelector('.sublink__a').innerText = link;
           clone.querySelector('.sublinks').appendChild(subClone);
@@ -95,4 +92,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+  let click = document.querySelector('.categories__Wrapper');
+
+  click.addEventListener('click', (e) => {
+  
+      e.path[1].lastElementChild.classList.toggle('subshow');
+    
+  })
 });

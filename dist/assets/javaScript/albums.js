@@ -1,14 +1,16 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.header__text');
+  header.innerHTML = "Albums";
+
   if (sessionStorage.getItem("access_token") != undefined) {
     getfetch();
     getAlbumFetch();
   } else {
     postfetch();
-  }
+  } //console.log(sessionStorage)
 
-  console.log(sessionStorage);
 
   function postfetch() {
     fetch("https://accounts.spotify.com/api/token", {
@@ -39,9 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }).then(function (response) {
       return response.json();
-    }).then(function (data) {
-      console.log(data);
-      console.log(sessionStorage.access_token);
+    }).then(function (data) {//   console.log(data)
+      //   console.log(sessionStorage.access_token)
     })["catch"](function (error) {
       console.error('error', error);
     });
@@ -66,16 +67,16 @@ document.addEventListener('DOMContentLoaded', function () {
       /*             console.log(sessionStorage.access_token) */
 
       data.albums.items.forEach(function (album) {
-        console.log(album);
+        //console.log(album)
         var cloneOne = swiperTemplate.content.cloneNode(true);
         cloneOne.querySelector('.swiper__img').src = "".concat(album.images[0].url);
         listOne.appendChild(cloneOne);
         var cloneTwo = listObjectTemplate.content.cloneNode(true);
         cloneTwo.querySelector('.listobject__img').src = "".concat(album.images[0].url);
-        cloneTwo.querySelector('.listobject__info');
         cloneTwo.querySelector('.listobject__heading').innerHTML = "".concat(album.name);
         cloneTwo.querySelector('#artist').innerHTML = "".concat(album.artists[0].name);
         cloneTwo.querySelector('.listobject__count').innerHTML = "".concat(album.total_tracks, " track");
+        cloneTwo.querySelector('.listobject__info').href = "/albumdetails/index.html?id=".concat(album.id);
         listTwo.appendChild(cloneTwo);
       });
       var elem = document.querySelector('.main-carousel');

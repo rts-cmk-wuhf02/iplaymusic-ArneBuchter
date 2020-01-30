@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    let header = document.querySelector('.header__text');
+    header.innerHTML = "Albums";
+
     if (sessionStorage.getItem("access_token") != undefined) {
 
         getfetch();
@@ -10,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         postfetch();
 
     }
-    console.log(sessionStorage)
+    //console.log(sessionStorage)
     function postfetch() {
         fetch("https://accounts.spotify.com/api/token", {
             method: "POST",
@@ -43,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }).then((response) => response.json())
             .then((data) => {
-                console.log(data)
-                console.log(sessionStorage.access_token)
+             //   console.log(data)
+             //   console.log(sessionStorage.access_token)
             })
             .catch((error) => {
                 console.error('error', error);
@@ -73,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 /*             console.log(sessionStorage.access_token) */
 
                 data.albums.items.forEach(function (album) {
-                    console.log(album)
+                    //console.log(album)
 
                     let cloneOne = swiperTemplate.content.cloneNode(true);
                     cloneOne.querySelector('.swiper__img').src = `${album.images[0].url}`;
@@ -82,12 +85,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     let cloneTwo = listObjectTemplate.content.cloneNode(true);
 
                     cloneTwo.querySelector('.listobject__img').src = `${album.images[0].url}`;
-                    cloneTwo.querySelector('.listobject__info');
                     cloneTwo.querySelector('.listobject__heading').innerHTML = `${album.name}`;
                     cloneTwo.querySelector('#artist').innerHTML = `${album.artists[0].name}`;
                     cloneTwo.querySelector('.listobject__count').innerHTML = `${album.total_tracks} track`;
+                    cloneTwo.querySelector('.listobject__info').href = `/albumdetails/index.html?id=${album.id}`;
                     listTwo.appendChild(cloneTwo);
-                })
+                    
+                    })
+                
+
                 var elem = document.querySelector('.main-carousel');
                 new Flickity(elem, {
                     // options
@@ -96,14 +102,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     prevNextButtons: false,
                     pageDots: false
 
+
                 })
             })
-            .catch((error) => {
-                console.error('error', error);
-                if (error) {
-                    postfetch();
-                }
-            })
-    }
+                .catch((error) => {
+                    console.error('error', error);
+                    if (error) {
+                        postfetch();
+                    }
+                })
+            }       
 
+        
 }) 

@@ -1,10 +1,15 @@
 .listobject{
-        width: 95%;
-        margin: 1rem 0;
-        display: grid;
-        row-gap: 16px;
-        grid-template-columns: 70px 2.8fr 1fr;
-
+    width: 95%;
+    margin: 1rem 0;
+    display: grid;
+    row-gap: 16px;
+    grid-template-columns: 70px 2.8fr 1fr;
+    
+    &__info{
+        text-decoration: none;
+        color: $header-color;
+    }
+    
     &__img{
         width: 50px;
         height: 50px;

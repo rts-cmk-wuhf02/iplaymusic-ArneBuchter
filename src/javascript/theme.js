@@ -15,16 +15,17 @@ theme.addEventListener('click', () => {
     }
     footer.classList.toggle('dark__hero');
     if(albums){
-        albums.classList.toggle('alfd')
+        albums.classList.toggle('alfd');
     }
     if(playlists){
-        playlists.classList.toggle('pfd')
+        playlists.classList.toggle('pfd');
     }
     if(index){
-        index.classList.toggle('ifd')
+        index.classList.toggle('ifd');
     }
     if(cat){
-        cat.classList.toggle('fcd')
+        cat.classList.toggle('fcd');
     }
-    header.classList.toggle('header_dark')
+
+    header.classList.toggle('header_dark');
 })

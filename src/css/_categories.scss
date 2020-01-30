@@ -1,16 +1,19 @@
 .categories{
 
+        padding-top: 8rem;
+    
+
     &__mainlist{
         padding: 0 1.3rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         background-color: $focus-text-color;
         width: 95%;
         height: 3rem;
         color: $header-color-dark;
         margin-top: 5px;
         border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__angleright{
@@ -40,6 +43,7 @@
 
 .sublinks{
     display: none;
+    line-height: 3rem;
     list-style: none;
 }
 .sublink__a{

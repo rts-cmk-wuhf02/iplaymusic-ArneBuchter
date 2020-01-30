@@ -1,8 +1,8 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
-  var colors = ["#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625", "#4D1F48", "#D70060", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#111625"];
-  var catLink = document.querySelector('.categories__Wrapper');
+  var header = document.querySelector('.header__text');
+  header.innerHTML = "Featured";
 
   if (sessionStorage.getItem("access_token") != undefined) {
     getfetch();

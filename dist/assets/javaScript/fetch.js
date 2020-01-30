@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     postfetch();
   }
 
+  var header = document.querySelector('.header__text');
+  header.innerHTML = "Categories";
   console.log(sessionStorage);
 
   function postfetch() {
@@ -66,11 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }).then(function (data) {
       var categoriTemplate = document.querySelector('.categories__template');
       var list = document.getElementsByClassName('categories__Wrapper')[0];
-      /*       console.log(sessionStorage.access_token);
-            console.log(data.categories.items); */
-
-      var subTemplate = document.querySelector('.sublinks__template'); //let listItem = document.getElementsByClassName('sublinks')[0];
-
+      var subTemplate = document.querySelector('.sublinks__template');
       var textInput = ['link 1', 'link 2', 'link 3', 'link 4'];
       data.categories.items.forEach(function (categori, id) {
         var clone = categoriTemplate.content.cloneNode(true);
@@ -79,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
         clone.querySelector('.icon');
         clone.querySelector('.sublinks');
         textInput.forEach(function (link) {
-          //  console.log(link)
           var subClone = subTemplate.content.cloneNode(true);
           subClone.querySelector('.sublink__a').innerText = link;
           clone.querySelector('.sublinks').appendChild(subClone);
@@ -94,4 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  var click = document.querySelector('.categories__Wrapper');
+  click.addEventListener('click', function (e) {
+    e.path[1].lastElementChild.classList.toggle('subshow');
+  });
 });
